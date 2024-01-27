@@ -6,6 +6,7 @@ services:
     # Deploy override
     environment:
       APP_ENV: dev
+      SECRET: !reset null
     ports: !reset
       # HTTP
       - target: 80

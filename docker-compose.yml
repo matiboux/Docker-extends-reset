@@ -33,6 +33,7 @@ services:
     # Deploy
     environment:
       APP_ENV: prod
+      SECRET: ${SECRET:-secret}
     ports:
       # HTTP
       - target: 80
