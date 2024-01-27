@@ -9,12 +9,6 @@ services:
       service: app
     # Build override
     image: app-a
-    # Deploy override
-    ports: !reset
-      # HTTP
-      - target: 80
-        published: ${HTTP_A_PORT:-80}
-        protocol: tcp
 
   b:
     # Extend
