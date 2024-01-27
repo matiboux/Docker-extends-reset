@@ -9,6 +9,8 @@ services:
       context: .
       dockerfile: Dockerfile
     # Deploy
+    environment:
+      SECRET: ${SECRET:-secret}
     ports:
       # HTTP
       - target: 80

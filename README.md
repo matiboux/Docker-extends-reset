@@ -78,6 +78,9 @@ services:
 ### Issues
 
 There are three issues here:
+- Service `b` has `SECRET` environment variable set, even though it should have been unset.
+  - The value `'null'` overrides the value `'secret'` from `docker-compose-b.yml`.
+  - However, the value should have been unset, not set to the `'null'` string.
 - Service `b` has two ports, instead of one.
   - The port `80:80` from `app` in `docker-compose-b.yml` has not been unset, even though it should have been.
   - The port `8080:80` from `docker-compose.yml` has been set correctly.

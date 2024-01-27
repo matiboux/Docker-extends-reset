@@ -18,6 +18,8 @@ services:
     # Build override
     image: app-b
     # Deploy override
+    environment:
+      SECRET: !reset null
     ports: !reset
       # HTTP
       - target: 80
