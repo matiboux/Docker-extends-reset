@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+
+  c:
+    # Deploy override
+    environment:
+      APP_ENV: dev
+    ports: !reset
+      # HTTP
+      - target: 80
+        published: ${HTTP_C_PORT:-8081}
+        protocol: tcp
